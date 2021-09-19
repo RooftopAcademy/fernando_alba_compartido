@@ -39,10 +39,11 @@
 }
 .card-brand-item {
     display: block;
-    padding: 1rem;
+    padding: 1rem 0;
     box-shadow: 0 0.125rem 0.3rem -0.0625rem rgb(0 0 0 / 3%), 0 0.275rem 0.75rem -0.0625rem rgb(0 0 0 / 6%);
     margin-bottom: 1.875rem;
     border-radius: .4375rem;
+    text-align: center;
 }
 .img-brand {
     width: 150px;
@@ -57,7 +58,7 @@
         width: 33.33333333%;
     }
     .card-brand-item {
-        padding: 1.5rem;
+        padding: 1.5rem 0;
     }
 }
 /* // Small devices (landscape phones, 576px and up) */
