@@ -1,0 +1,2 @@
+
+let store = new Store
