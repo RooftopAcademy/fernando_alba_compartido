@@ -1,6 +1,15 @@
 class Catalog {
     constructor() {
+        this._brandList = []
         this._productList = []
+    }
+
+    addBrand(brand) {
+        if (brand instanceof Brand) {
+            this._brandList.push(brand)
+            return
+        }
+        throw new Error('brand debe ser del tipo Brand')
     }
 
     addProduct(product) {

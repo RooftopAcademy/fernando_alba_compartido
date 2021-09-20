@@ -15,4 +15,14 @@ class Store {
     get user() {
         return this._user
     }
+
+    fetchBrands() {
+    }
+
+    fetchProducts() {
+    }
+
+    getCart() {
+        return this._cart
+    }
 }
