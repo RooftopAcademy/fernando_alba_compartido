@@ -11,7 +11,7 @@ function productItemView(product) {
             <div class="product-price">
                 <span>$${product.price.toFixed(2)}</span>
             </div>
-            <button class="btn btn-primary add-to-card" type="button">
+            <button class="btn btn-primary add-to-card js-add-to-cart" type="button" data-product-id="${product.id}">
                 <i class="fas fa-shopping-cart"></i>
                 Add to Cart
             </button>
