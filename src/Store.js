@@ -51,16 +51,8 @@ class Store {
         ]
 
         data.forEach(item => {
-            let product = new Product
-
-            product.id = item.id
-            product.name = item.name
-            product.image = item.image
-            product.category = item.category
-            product.price = item.price
-            
-            this._catalog.addProduct(product)
-        })
+            this._catalog.addProduct(ProductFactory.create(item))
+            })
     }
 
     get catalog() {
