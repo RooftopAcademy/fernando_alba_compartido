@@ -64,7 +64,7 @@ class Product {
     }
 
     set price(price) {
-        if (typeof price == Number) {
+        if (typeof price == 'number') {
             this._price = price
             return
         }

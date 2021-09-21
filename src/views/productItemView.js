@@ -9,7 +9,7 @@ function productItemView(product) {
             <a class="a product-category" href="#">${product.category}</a>
             <h3 class="product-title"><a class="a" href="#">${product.name}</a></h3>
             <div class="product-price">
-                <span>$${Math.trunc(product.price)}.<small>${(product.price - Math.floor(product.price).toFixed(2))}</small></span>
+                <span>$${product.price.toFixed(2)}</span>
             </div>
             <button class="btn btn-primary add-to-card" type="button">
                 <i class="fas fa-shopping-cart"></i>
