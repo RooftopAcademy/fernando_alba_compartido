@@ -30,19 +30,23 @@ class Store {
         ]
 
         data.forEach(item => {
-            let brand = new Brand
-
-            brand.id = item.id
-            brand.name = item.name
-            brand.image = item.image
-            
-            this._catalog.addBrand(brand)
-        })
+            this._catalog.addBrand(BrandFactory.create(item))
+            })
         
     }
 
     fetchProducts() {
-        this._catalog.addProduct(new Product)
+        let data = [
+            {id:'01', image: 'https://cartzilla.createx.studio/img/shop/catalog/01.jpg', name: 'Women Colorblock Sneakers', description: '', category: 'Sneakers & Keds', price: 154.00},
+            {id:'02', image: 'https://cartzilla.createx.studio/img/shop/catalog/02.jpg', name: 'Cotton Lace Blouse', description: '', category: 'Women`s T-shirt', price: 28.50},
+            {id:'03', image: 'https://cartzilla.createx.studio/img/shop/catalog/03.jpg', name: 'Mom High Waist Shorts', description: '', category: 'Women`s Shorts', price: 39.50},
+            {id:'04', image: 'https://cartzilla.createx.studio/img/shop/catalog/04.jpg', name: 'Women Sports Jacket', description: '', category: 'Sportwear', price: 68.40},
+            {id:'05', image: 'https://cartzilla.createx.studio/img/shop/catalog/05.jpg', name: 'Polarized Sunglasses', description: '', category: 'Mens`s Sunglasses', price: 50.30}
+        ]
+
+        data.forEach(item => {
+            this._catalog.addProduct(ProductFactory.create(item))
+            })
     }
 
     get catalog() {

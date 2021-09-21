@@ -29,8 +29,8 @@ class Catalog {
     }
 
     findProductById(id) {
-        return this._productList.find(product => {
-            return product.id = id
-        })
+        return this._productList.find(product => 
+            product.id == id
+        )
     }
 }

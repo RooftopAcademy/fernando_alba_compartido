@@ -19,7 +19,24 @@
         integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+        <!-- models -->
+        <script src="src/Store.js" defer></script>
+        <script src="src/User.js" defer></script>
+        <script src="src/Catalog.js" defer></script>
+        <script src="src/Cart.js" defer></script>
+        <script src="src/Brand.js" defer></script>
+        <script src="src/Product.js" defer></script>
+        
+        <!-- factories -->
+        <script src="src/factories/ProductFactory.js" defer></script>
+
+        <!-- views -->
+        <script src="src/views/productItemView.js" defer></script>
+        <script src="src/views/productList.js" defer></script>
+
+        <!-- scripts -->
         <script src="js/app.js" defer></script>
+        <script src="js/product-list.js"defer></script>
 </head>
 <body class="d-flex body">
     <header class="d-flex header">
@@ -79,75 +96,8 @@
 
     <main class="d-flex main">
 
-        <div class="product-list d-flex">
-
-            <div class="product-item">
-                <a class="a product-item-img-box">
-                    <img class="product-item-img" src="images/products/02.jpg" alt="Product">
-                </a>
-                <div class="product-item-body d-flex">
-                    <a class="a product-category" href="#">Sneakers &amp; Keds</a>
-                    <h3 class="product-title"><a class="a" href="#">Women Colorblock Sneakers</a></h3>
-                    <div class="product-price">
-                        <span>$154.<small>00</small></span>
-                    </div>
-                    <button class="btn btn-primary add-to-card" type="button">
-                        <i class="fas fa-shopping-cart"></i>
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <div class="product-item">
-                <a class="a product-item-img-box">
-                    <img class="product-item-img" src="images/products/02.jpg" alt="Product">
-                </a>
-                <div class="product-item-body d-flex">
-                    <a class="a product-category" href="#">Sneakers &amp; Keds</a>
-                    <h3 class="product-title"><a class="a" href="#">Women Colorblock Sneakers</a></h3>
-                    <div class="product-price">
-                        <span>$154.<small>00</small></span>
-                    </div>
-                    <button class="btn btn-primary add-to-card" type="button">
-                        <i class="fas fa-shopping-cart"></i>
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-            <div class="product-item">
-                <a class="a product-item-img-box">
-                    <img class="product-item-img" src="images/products/02.jpg" alt="Product">
-                </a>
-                <div class="product-item-body d-flex">
-                    <a class="a product-category" href="#">Sneakers &amp; Keds</a>
-                    <h3 class="product-title"><a class="a" href="#">Women Colorblock Sneakers</a></h3>
-                    <div class="product-price">
-                        <span>$154.<small>00</small></span>
-                    </div>
-                    <button class="btn btn-primary add-to-card" type="button">
-                        <i class="fas fa-shopping-cart"></i>
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
-            <div class="product-item">
-                <a class="a product-item-img-box">
-                    <img class="product-item-img" src="images/products/02.jpg" alt="Product">
-                </a>
-                <div class="product-item-body d-flex">
-                    <a class="a product-category" href="#">Sneakers &amp; Keds</a>
-                    <h3 class="product-title"><a class="a" href="#">Women Colorblock Sneakers</a></h3>
-                    <div class="product-price">
-                        <span>$154.<small>00</small></span>
-                    </div>
-                    <button class="btn btn-primary add-to-card" type="button">
-                        <i class="fas fa-shopping-cart"></i>
-                        Add to Cart
-                    </button>
-                </div>
-            </div>
-
+        <div class="product-list d-flex js-product-list">
+            <!-- Render with javascript -->
         </div>
     </main>
 
