@@ -68,7 +68,7 @@ class Product {
             this._price = price
             return
         }
-        throw new Error(' debe ser un ')
+        throw new Error('price debe ser un Number')
     }
     get price() {
         return this._price;

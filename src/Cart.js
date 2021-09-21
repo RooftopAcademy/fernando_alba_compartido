@@ -7,6 +7,6 @@ class Cart {
             this._products.push(product)
             return
         }
-        throw new Error('El parámetro 1 debe ser del tipo Product')
+        throw new Error('El parámetro recibido debe ser del tipo Product')
     }
 }
