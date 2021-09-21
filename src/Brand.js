@@ -1,6 +1,6 @@
 class Brand {
     constructor() {
-        this._id = ""
+        this._id = ''
         this._name = ''
         this._image = ''
     }
@@ -30,10 +30,11 @@ class Brand {
     set image(image) {
         if (typeof image == 'string') {
             this._image = image
+            return
         }
         throw new Error('image debe ser de tipo string')
     }
     get image() {
-        return this.image
+        return this._image
     }
 }

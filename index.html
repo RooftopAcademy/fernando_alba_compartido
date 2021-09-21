@@ -28,6 +28,9 @@
     <script src="src/Cart.js" defer></script>
     <script src="src/Brand.js" defer></script>
     <script src="src/Product.js" defer></script>
+
+    <script src="src/views/brandItemView.js"></script>
+
     <script src="js/index.js" defer></script>
 </head>
 
@@ -130,49 +133,9 @@
 
         <div class="shop-by-brand">
             <h3 class="h3 text-dark text-align-center">Shop by brand</h3>
-            <div class="d-flex card-brand-container">
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/01.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/02.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/03.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/04.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/05.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/06.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/09.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/08.png" alt="Brand">
-                    </a>
-                </div>
+            <div class="d-flex card-brand-container js-brand-list">
+                <!-- render with javascript -->
             </div>
-
         </div>
 
         <section class="blog-instagram-cards"></section>
