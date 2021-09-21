@@ -21,6 +21,17 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script src="js/app.js" defer></script>
+
+    <script src="src/Store.js" defer></script>
+    <script src="src/User.js" defer></script>
+    <script src="src/Catalog.js" defer></script>
+    <script src="src/Cart.js" defer></script>
+    <script src="src/Brand.js" defer></script>
+    <script src="src/Product.js" defer></script>
+
+    <script src="src/views/brandItemView.js"></script>
+
+    <script src="js/index.js" defer></script>
 </head>
 
 <body class="d-flex body">
@@ -69,11 +80,11 @@
                     </a>
                 </div>
                 <div class="navbar-menu d-flex hidden" id="navbar-menu">
-                    <div class="navbar-menu-item"><a class="a" href="#">Woman</a></div>
-                    <div class="navbar-menu-item"><a class="a" href="#">Man</a></div>
-                    <div class="navbar-menu-item"><a class="a" href="#">Kid</a></div>
-                    <div class="navbar-menu-item"><a class="a" href="#">Sport</a></div>
-                    <div class="navbar-menu-item"><a class="a" href="#">Sales</a></div>
+                    <div class="navbar-menu-item"><a class="a" href="product-list.html">Woman</a></div>
+                    <div class="navbar-menu-item"><a class="a" href="product-list.html">Man</a></div>
+                    <div class="navbar-menu-item"><a class="a" href="product-list.html">Kid</a></div>
+                    <div class="navbar-menu-item"><a class="a" href="product-list.html">Sport</a></div>
+                    <div class="navbar-menu-item"><a class="a" href="product-list.html">Sales</a></div>
                 </div>
             </div>
         </div>
@@ -86,7 +97,7 @@
                 <h3 class="h3 text-light">Has just arrived!</h3>
                 <h2 class="h2 text-light">Huge Summer Collection</h2>
                 <p class="p text-light">Swimwear, Tops, Shorts, Sunglasses &amp; much more...</p>
-                <a class="btn btn-primary" href="#">Shop Now<i class="arrow-icon fas fa-chevron-right"></i></a>
+                <a class="btn btn-primary" href="product-list.html">Shop Now<i class="arrow-icon fas fa-chevron-right"></i></a>
             </div>
         </div>
 
@@ -121,50 +132,10 @@
         </section>
 
         <div class="shop-by-brand">
-            <h3 class="h3 text-dark">Shop by brand</h3>
-            <div class="d-flex card-brand-container">
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/01.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/02.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/03.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/04.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/05.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/06.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/09.png" alt="Brand">
-                    </a>
-                </div>
-                <div class="card-brand">
-                    <a class="card-brand-item" href="#">
-                        <img class="img-brand" src="images/brands/08.png" alt="Brand">
-                    </a>
-                </div>
+            <h3 class="h3 text-dark text-align-center">Shop by brand</h3>
+            <div class="d-flex card-brand-container js-brand-list">
+                <!-- render with javascript -->
             </div>
-
         </div>
 
         <section class="blog-instagram-cards"></section>
