@@ -781,7 +781,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ navbarView)
 /* harmony export */ });
 function navbarView() {
-    return "\n    <div class=\"navbar\">\n        <div class=\"navbar-group d-flex\" id=\"navbar-group\">\n            <a class=\"logo small\" href=\"index.html\">\n                <img src=\"https://cartzilla.createx.studio/img/logo-icon.png\" alt=\"Cartzilla\" />\n            </a>\n            <a class=\"logo large\" href=\"index.html\">\n                <img src=\"https://cartzilla.createx.studio/img/logo-dark.png\" alt=\"Cartzilla\" />\n            </a>\n            <div class=\"navbar-search\" id=\"navbar-search\">\n                <input class=\"input\" type=\"text\" placeholder=\"Search for products\" />\n                <i class=\"search-icon fas fa-search\"></i>\n            </div>\n            <div class=\"navbar-toolbar d-flex\" id=\"toolbar\">\n                <div class=\"navbar-tool toggle\" id=\"toggle-btn\">\n                    <div class=\"navbar-tool-icon-box\">\n                        <i class=\"navbar-tool-icon fas fa-bars\"></i>\n                    </div>\n                </div>\n                <a class=\"navbar-tool wish-list\">\n                    <div class=\"navbar-tool-icon-box\">\n                        <i class=\"navbar-tool-icon far fa-heart\"></i>\n                    </div>\n                </a>\n                <a class=\"navbar-tool d-flex\">\n                    <div class=\"navbar-tool-icon-box\">\n                        <i class=\"navbar-tool-icon far fa-user\"></i>\n                    </div>\n                    <div class=\"navbar-tool-text d-flex\">\n                        <small>Hello, Sign in</small>\n                        My Account\n                    </div>\n                </a>\n                <a class=\"navbar-tool d-flex\">\n                    <div class=\"navbar-tool-icon-box\">\n                        <span class=\"navbar-tool-icon-label\">0</span>\n                        <i class=\"navbar-tool-icon fas fa-shopping-cart\"></i>\n                    </div>\n                    <div class=\"navbar-tool-text text-cart d-flex\">\n                        <small>My Cart</small>\n                        $0\n                    </div>\n                </a>\n            </div>\n            <div class=\"navbar-menu d-flex hidden\" id=\"navbar-menu\">\n                <div class=\"navbar-menu-item\"><a class=\"a\" href=\"product-list.html\">Woman</a></div>\n                <div class=\"navbar-menu-item\"><a class=\"a\" href=\"product-list.html\">Man</a></div>\n                <div class=\"navbar-menu-item\"><a class=\"a\" href=\"product-list.html\">Kid</a></div>\n                <div class=\"navbar-menu-item\"><a class=\"a\" href=\"product-list.html\">Sport</a></div>\n                <div class=\"navbar-menu-item\"><a class=\"a\" href=\"product-list.html\">Sales</a></div>\n            </div>\n        </div>\n    </div>\n    ";
+    return "\n    <div class=\"navbar\">\n        <div class=\"navbar-group d-flex\" id=\"navbar-group\">\n            <a class=\"logo small ts-route\" href=\"#\">\n                <img src=\"https://cartzilla.createx.studio/img/logo-icon.png\" alt=\"Cartzilla\" />\n            </a>\n            <a class=\"logo large ts-route\" href=\"#\">\n                <img src=\"https://cartzilla.createx.studio/img/logo-dark.png\" alt=\"Cartzilla\" />\n            </a>\n            <div class=\"navbar-search\" id=\"navbar-search\">\n                <input class=\"input\" type=\"text\" placeholder=\"Search for products\" />\n                <i class=\"search-icon fas fa-search\"></i>\n            </div>\n            <div class=\"navbar-toolbar d-flex\" id=\"toolbar\">\n                <div class=\"navbar-tool toggle\" id=\"toggle-btn\">\n                    <div class=\"navbar-tool-icon-box\">\n                        <i class=\"navbar-tool-icon fas fa-bars\"></i>\n                    </div>\n                </div>\n                <a class=\"navbar-tool wish-list\">\n                    <div class=\"navbar-tool-icon-box\">\n                        <i class=\"navbar-tool-icon far fa-heart\"></i>\n                    </div>\n                </a>\n                <a class=\"navbar-tool d-flex\">\n                    <div class=\"navbar-tool-icon-box\">\n                        <i class=\"navbar-tool-icon far fa-user\"></i>\n                    </div>\n                    <div class=\"navbar-tool-text d-flex\">\n                        <small>Hello, Sign in</small>\n                        My Account\n                    </div>\n                </a>\n                <a class=\"navbar-tool d-flex\">\n                    <div class=\"navbar-tool-icon-box\">\n                        <span class=\"navbar-tool-icon-label\">0</span>\n                        <i class=\"navbar-tool-icon fas fa-shopping-cart\"></i>\n                    </div>\n                    <div class=\"navbar-tool-text text-cart d-flex\">\n                        <small>My Cart</small>\n                        $0\n                    </div>\n                </a>\n            </div>\n            <div class=\"navbar-menu d-flex hidden\" id=\"navbar-menu\">\n                <div class=\"navbar-menu-item\"><a class=\"a ts-route\" href=\"#\">Woman</a></div>\n                <div class=\"navbar-menu-item\"><a class=\"a ts-route\" href=\"#\">Man</a></div>\n                <div class=\"navbar-menu-item\"><a class=\"a ts-route\" href=\"#\">Kid</a></div>\n                <div class=\"navbar-menu-item\"><a class=\"a ts-route\" href=\"#\">Sport</a></div>\n                <div class=\"navbar-menu-item\"><a class=\"a ts-route\" href=\"#\">Sales</a></div>\n            </div>\n        </div>\n    </div>\n    ";
 }
 
 
@@ -872,8 +872,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var header = document.getElementById("js-header");
-header.innerHTML += (0,_views_navbarView__WEBPACK_IMPORTED_MODULE_4__["default"])();
+var header = document.getElementById("ts-header");
+renderPageBody(header);
+setNavigationListener();
+function renderPageBody(header) {
+    header.innerHTML += (0,_views_navbarView__WEBPACK_IMPORTED_MODULE_4__["default"])();
+    var toggle = header.querySelector('#toggle-btn');
+    setToggleClickListener(toggle);
+}
+function setToggleClickListener(toggle) {
+    toggle.addEventListener("click", function (e) {
+        var navbarGroup = toggle.parentElement.parentElement;
+        var qsaList = navbarGroup.querySelectorAll("#navbar-search, #navbar-menu");
+        var active = "active";
+        qsaList.forEach(function (element) {
+            element.classList.contains(active) ? element.classList.remove(active) : element.classList.add(active);
+        });
+    });
+}
+function setNavigationListener() {
+    Array.from(document.getElementsByClassName('ts-route')).forEach(function (element) {
+        element.addEventListener('click', function (e) {
+            e.preventDefault;
+            console.log(e.target.href);
+        });
+    });
+}
 
 })();
 

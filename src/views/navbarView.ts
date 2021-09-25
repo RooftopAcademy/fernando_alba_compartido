@@ -3,10 +3,10 @@ export default function navbarView() {
     return `
     <div class="navbar">
         <div class="navbar-group d-flex" id="navbar-group">
-            <a class="logo small" href="index.html">
+            <a class="logo small ts-route" href="#">
                 <img src="https://cartzilla.createx.studio/img/logo-icon.png" alt="Cartzilla" />
             </a>
-            <a class="logo large" href="index.html">
+            <a class="logo large ts-route" href="#">
                 <img src="https://cartzilla.createx.studio/img/logo-dark.png" alt="Cartzilla" />
             </a>
             <div class="navbar-search" id="navbar-search">
@@ -45,11 +45,11 @@ export default function navbarView() {
                 </a>
             </div>
             <div class="navbar-menu d-flex hidden" id="navbar-menu">
-                <div class="navbar-menu-item"><a class="a" href="product-list.html">Woman</a></div>
-                <div class="navbar-menu-item"><a class="a" href="product-list.html">Man</a></div>
-                <div class="navbar-menu-item"><a class="a" href="product-list.html">Kid</a></div>
-                <div class="navbar-menu-item"><a class="a" href="product-list.html">Sport</a></div>
-                <div class="navbar-menu-item"><a class="a" href="product-list.html">Sales</a></div>
+                <div class="navbar-menu-item"><a class="a ts-route" href="#">Woman</a></div>
+                <div class="navbar-menu-item"><a class="a ts-route" href="#">Man</a></div>
+                <div class="navbar-menu-item"><a class="a ts-route" href="#">Kid</a></div>
+                <div class="navbar-menu-item"><a class="a ts-route" href="#">Sport</a></div>
+                <div class="navbar-menu-item"><a class="a ts-route" href="#">Sales</a></div>
             </div>
         </div>
     </div>
