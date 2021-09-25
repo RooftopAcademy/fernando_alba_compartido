@@ -3,7 +3,10 @@ import "./css/elements.css"
 import "./css/index.css"
 import "./css/product-list.css"
 
+import navbarView from "./views/navbarView"
 
-console.log('Hello world!');
+let header = document.getElementById("js-header")!
+header.innerHTML += navbarView()
+
 
 

@@ -1,6 +1,6 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-const { Template } = require('webpack')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -22,14 +22,18 @@ module.exports = {
             },
             {
                 test: /\.(svg|png|jpg|jpeg|gif)$/,
-                loader: "file-loader",
-                options: {
-                    name: "[name].[hash:6][ext]",
-                    outputPath: "images",
-                    publicPath: "images",
-                    emitFile: true,
-                    esModule: false
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[ext]",
+                        outputPath: "images",
+                        publicPath: "images"
+                    }
                 }
+            },
+            {
+                test: /\.html$/,
+                use: ["html-loader"]
             }
         ]
     },
@@ -40,8 +44,9 @@ module.exports = {
         extensions: ["", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HTMLWebpackPlugin({
             template: './src/index.html'
         })
-    ]
+    ],
 }
