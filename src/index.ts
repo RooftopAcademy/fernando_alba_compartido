@@ -1,17 +1,18 @@
-import App from "./app"
+import App from "./App"
 import "./css/app.css"
 import "./css/elements.css"
 import "./css/index.css"
 import "./css/product-list.css"
 import navbarView from "./views/navbarView"
+import setNavigationListener from "./controller/navigation"
 
 let header = document.getElementById("ts-header")
 renderPageBody(header!)
-setNavigationListener()
 
 let mainContainer = document.getElementById('main-container')!
 let app = new App(mainContainer)
 app.navigate('/')
+setNavigationListener(app)
 
 
 function renderPageBody(header: HTMLElement) {
@@ -36,11 +37,12 @@ function setToggleClickListener(toggle: HTMLElement) {
     })
 }
 
-function setNavigationListener() {
-    Array.from(document.getElementsByClassName('ts-route')).forEach(element => {
-        element.addEventListener('click', function(e) {
-            e.preventDefault()
-            app.navigate((e.target as HTMLElement).getAttribute("data-route"))
-        })
-    })
-}
+// function setNavigationListener() {
+//     Array.from(document.getElementsByClassName('ts-route')).forEach(element => {
+//         element.addEventListener('click', function(e) {
+//             e.preventDefault()
+//             console.log((e.target as HTMLElement).getAttribute("data-route"));
+//             app.navigate((e.target as HTMLElement).getAttribute("data-route"))
+//         })
+//     })
+// }

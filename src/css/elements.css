@@ -54,6 +54,7 @@
     vertical-align: middle;
     margin-right: -0.25rem;
     margin-left: .5rem;
+    pointer-events: none;
 }
 
 /* // Small devices (landscape phones, 576px and up) */
