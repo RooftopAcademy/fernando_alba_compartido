@@ -49,6 +49,7 @@
 }
 .logo img {
     max-height: 34px;
+    pointer-events: none;
 }
 .logo.small {
     width: 74px;
@@ -111,6 +112,7 @@
     border-radius: 50%;
     line-height: 3.1rem;
     text-align: center;
+    pointer-events: none;
 }
 .navbar-tool-icon-label {
     position: absolute;
@@ -125,14 +127,17 @@
     font-weight: 500;
     text-align: center;
     line-height: 1.25rem;
+    pointer-events: none;
 }
 .navbar-tool-icon {
     font-size: 1.25rem;
     line-height: 2.875rem;
     color: #7d879c;
+    pointer-events: none;
 }
 small {
     color: #7d879c;
+    pointer-events: none;
 }
 .navbar-tool-text {
     flex-direction: column;
@@ -142,9 +147,11 @@ small {
     margin-right: .5rem;
     padding-left: .875rem;
     display: none;
+    pointer-events: none;
 }
 .navbar-tool-text.text-cart {
     margin-left: -0.3rem;
+    pointer-events: none;
 }
 .navbar-tool.wish-list {
     display: none;
