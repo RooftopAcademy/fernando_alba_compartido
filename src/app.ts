@@ -1,10 +1,10 @@
 import homePage from "./controller/homePage"
 import productsPage from "./controller/productsPage"
-import setNavigationListener from "./controller/navigation"
+import Store from "./model/Store"
 
 
 export default class App {
-    mainContainer: HTMLElement
+    mainContainer!: HTMLElement;
     // pages = {
     //     'file:///': homePage,
     //     'file:///products': productsPage,
@@ -12,19 +12,17 @@ export default class App {
     //     'file:///404': 'Oops!'
     // }
 
-    constructor(mainContainer: HTMLElement) {
+    setMainContainer(mainContainer: HTMLElement) {
         this.mainContainer = mainContainer
     }
 
     navigate(page: string | null) {
         switch (page) {
             case '/':
-                this.mainContainer.replaceChildren(homePage())
-                setNavigationListener(this)
+                this.mainContainer.replaceChildren(homePage(this))
                 break
             case '/products': 
                 this.mainContainer.replaceChildren(productsPage())
-                setNavigationListener(this)
                 break
             default: 
                 this.mainContainer.innerHTML = 'Oops!'

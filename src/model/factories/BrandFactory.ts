@@ -1,6 +1,7 @@
+import Brand from "../Brand"
 
-class BrandFactory {
-    static create(obj) {
+export default class BrandFactory {
+    static create(obj: any): Brand {
         let brand = new Brand
 
         brand.id = obj.id

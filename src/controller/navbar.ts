@@ -1,6 +1,6 @@
 import App from "../App";
 
-export default function setNavigationListener(app: App) {
+export default function setNavbarNavigationListener(app: App) {
     Array.from(document.getElementsByClassName('ts-route')).forEach(element => {
         element.addEventListener('click', function(e) {
             e.preventDefault()

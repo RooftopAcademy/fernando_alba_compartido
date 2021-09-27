@@ -1,18 +1,21 @@
 import App from "./App"
+import setNavbarNavigationListener from "./controller/navbar"
 import "./css/app.css"
 import "./css/elements.css"
 import "./css/index.css"
 import "./css/product-list.css"
 import navbarView from "./views/navbarView"
-import setNavigationListener from "./controller/navigation"
 
 let header = document.getElementById("ts-header")
 renderPageBody(header!)
 
 let mainContainer = document.getElementById('main-container')!
-let app = new App(mainContainer)
+let app = new App()
+app.setMainContainer(mainContainer)
+
+setNavbarNavigationListener(app)
+
 app.navigate('/')
-setNavigationListener(app)
 
 
 function renderPageBody(header: HTMLElement) {
