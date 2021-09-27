@@ -2,6 +2,8 @@ import BrandFactory from "./factories/BrandFactory";
 import Catalog from "./Catalog";
 import storeInterface from "./interfaces/storeInterface";
 import User from "./User";
+import Brand from "./Brand";
+import brandInterface from "./interfaces/brandInterface";
 
 export default class Store implements storeInterface {
     user!: User;
@@ -20,6 +22,9 @@ export default class Store implements storeInterface {
     }
 
     fetchBrands() {
+
+        this.getCatalog().brandList = []
+        
         let data = [
             {id:'01', image: 'https://cartzilla.createx.studio/img/shop/brands/01.png', name: 'Adidas'},
             {id:'02', image: 'https://cartzilla.createx.studio/img/shop/brands/02.png', name: 'Puma'},
@@ -33,7 +38,7 @@ export default class Store implements storeInterface {
         ]
 
         data.forEach(item => {
-            this.catalog.addBrand(BrandFactory.create(data))
+            this.catalog.addBrand(item)
             })
         
     }

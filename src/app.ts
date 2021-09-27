@@ -4,6 +4,7 @@ import Store from "./model/Store"
 
 
 export default class App {
+    store: Store = new Store;
     mainContainer!: HTMLElement;
     // pages = {
     //     'file:///': homePage,
@@ -11,6 +12,10 @@ export default class App {
     //     'file:///cart': cartPage,
     //     'file:///404': 'Oops!'
     // }
+
+    getStore(): Store {
+        return this.store
+    }
 
     setMainContainer(mainContainer: HTMLElement) {
         this.mainContainer = mainContainer
@@ -24,6 +29,9 @@ export default class App {
             case '/products': 
                 this.mainContainer.replaceChildren(productsPage())
                 break
+            // case `/products/${id}`: 
+            //     this.mainContainer.replaceChildren(productsPage())
+            //     break
             default: 
                 this.mainContainer.innerHTML = 'Oops!'
                 break
