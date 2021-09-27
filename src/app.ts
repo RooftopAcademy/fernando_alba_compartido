@@ -21,17 +21,17 @@ export default class App {
         this.mainContainer = mainContainer
     }
 
-    navigate(page: string | null) {
+    navigate(page: string | null, id?: string | null) {
         switch (page) {
             case '/':
                 this.mainContainer.replaceChildren(homePage(this))
                 break
             case '/products': 
-                this.mainContainer.replaceChildren(productsPage())
+                this.mainContainer.replaceChildren(productsPage(this))
                 break
-            // case `/products/${id}`: 
-            //     this.mainContainer.replaceChildren(productsPage())
-            //     break
+            case `/product-detail`: 
+                this.mainContainer.replaceChildren(`Detalle de producto ${id}`)
+                break
             default: 
                 this.mainContainer.innerHTML = 'Oops!'
                 break

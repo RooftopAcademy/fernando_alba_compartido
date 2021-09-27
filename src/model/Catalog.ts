@@ -1,12 +1,10 @@
 import brandInterface from "./interfaces/brandInterface";
 import catalogInterface from "./interfaces/catalogInterface";
-import clothingInterface from "./interfaces/clothingInterface";
-import shoesInterface from "./interfaces/shoesInterface";
+import productInterface from "./interfaces/productInterface";
 
 export default class Catalog implements catalogInterface{
     brandList: brandInterface[] = [];
-    shoesList: shoesInterface[] = [];
-    clothingList: clothingInterface[] = [];
+    productList: productInterface[] = [];
 
     addBrand(brand: brandInterface) {
         this.brandList.push(brand)
@@ -16,20 +14,18 @@ export default class Catalog implements catalogInterface{
         return this.brandList
     }
 
-    addShoes(shoes: shoesInterface) {
-        this.shoesList.push(shoes)
+    addProduct(product: productInterface) {
+        this.productList.push(product)
     }
 
-    getShoesList(): shoesInterface[] {
-        return this.shoesList
+    getProductList(): productInterface[] {
+        return this.productList
     }
 
-    addClothing(clothing: clothingInterface) {
-        this.clothingList.push(clothing)
-    }
-
-    getClothingList(): clothingInterface[] {
-        return this.clothingList
+    findProductById(id: string): productInterface {
+        return this.productList.find(product => 
+            product.id == id
+        )!
     }
 
 }

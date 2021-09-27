@@ -48,6 +48,10 @@
     background-color: #fe696a;
     border-color: #fe696a;
 }
+.btn-primary:hover {
+    background-color: #fc3030;
+    border-color: #fc3030;
+}
 .arrow-icon {
     font-size: 22px;
     margin-top: -0.1875rem;
