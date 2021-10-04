@@ -1,25 +1,45 @@
+import App from "../App";
+import HomePage from "../components/HomePage";
+import brandInterface from "../model/interfaces/brandInterface";
+import AbstractView from "./AbstractView";
+import brandList from "./brandList";
 
-export default function homeView() {
-    return `
-    <div class="carrousel d-flex">
-        <img class="carrousel-img" src="https://cartzilla.createx.studio/img/home/hero-slider/01.jpg" alt="Summer Collection">
-        <div class="carrousel-text">
-            <h3 class="h3 text-light">Has just arrived!</h3>
-            <h2 class="h2 text-light">Huge Summer Collection</h2>
-            <p class="p text-light">Swimwear, Tops, Shorts, Sunglasses &amp; much more...</p>
-            <a class="btn btn-primary ts-route" href="" data-route="/products">Shop Now
-                <i class="arrow-icon fas fa-chevron-right"></i>
-            </a>
-        </div>
-    </div>
+export default class HomeView extends AbstractView {
 
-    <div class="shop-by-brand">
-        <h3 class="h3 text-dark text-align-center">Shop by brand</h3>
-        <div class="d-flex card-brand-container js-brand-list">
-            <!-- render dynamically -->
-        </div>
-    </div>
+    constructor(app: App, params: string[] | undefined) {
+        super(app, params);
+        this.setTitle('Home')
+    }
 
-    <section class="blog-instagram-cards"></section>
-    `
+    getHTMLElement(): HTMLElement {
+
+        const divElement = document.createElement('div')
+        divElement.innerHTML = HomePage()
+
+        this.app.getStore().fetchBrands()
+        const brandList = this.app.getStore().getCatalog().getBrandList()
+
+        this.renderBrandList(divElement, brandList)
+        this.setEventListener(divElement, this.app)
+        
+        return divElement
+    }
+
+    renderBrandList(divElement: HTMLDivElement, brands: brandInterface[]) {
+        Array.from(divElement.getElementsByClassName('js-brand-list'))
+            .forEach(list => 
+                brandList(brands)
+                    .forEach(item => list.innerHTML += item)
+        )
+    }
+
+    setEventListener(divElement: HTMLDivElement, app: App) {
+        Array.from(divElement.getElementsByClassName('ts-route')).forEach(element => {
+            element.addEventListener('click', function(e) {
+                e.preventDefault()
+                // console.log((e.target as HTMLAnchorElement).pathname);
+                app.navigateTo( (e.target as HTMLAnchorElement).pathname)
+            })
+        })
+    }
 }
