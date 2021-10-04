@@ -1,5 +1,4 @@
 import Brand from "../Brand"
-import brandInterface from "../interfaces/brandInterface"
 
 export default class BrandFactory {
     static create(obj: { id: string; name: string; image: string }): Brand {

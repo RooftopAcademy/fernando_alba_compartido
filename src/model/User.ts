@@ -1,5 +1,4 @@
 import Cart from "./Cart";
-import cartInterface from "./interfaces/cartInterface";
 import productInterface from "./interfaces/productInterface";
 import userInterface from "./interfaces/userInterface";
 
