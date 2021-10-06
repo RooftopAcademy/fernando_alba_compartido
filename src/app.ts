@@ -49,6 +49,7 @@ export default class App {
         const params = match.result?.slice(1)
         
         const view = new match.route.view(this, params)
+        
 
         this.container.replaceChildren(view.getHTMLElement())
         
