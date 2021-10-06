@@ -12,7 +12,10 @@ app.setContainer(document.getElementById('app') as HTMLElement)
 
 app.navigateTo('/home')
 
-// window.addEventListener("popstate", app.router)
+window.addEventListener("popstate", function() {
+    app.router()
+})
+
 
 
 
