@@ -3,10 +3,10 @@ export default function navbarComponent() {
     return `
     <div class="navbar">
         <div class="navbar-group d-flex" id="navbar-group">
-            <a class="logo small ts-route" href="/home">
+            <a class="logo small ts-route" href="/">
                 <img src="https://cartzilla.createx.studio/img/logo-icon.png" alt="Cartzilla"/>
             </a>
-            <a class="logo large ts-route" href="/home">
+            <a class="logo large ts-route" href="/">
                 <img src="https://cartzilla.createx.studio/img/logo-dark.png" alt="Cartzilla"/>
             </a>
             <div class="navbar-search" id="navbar-search">
@@ -19,12 +19,12 @@ export default function navbarComponent() {
                         <i class="navbar-tool-icon fas fa-bars"></i>
                     </div>
                 </div>
-                <a class="navbar-tool wish-list ts-route" href="/home">
+                <a class="navbar-tool wish-list ts-route" href="/">
                     <div class="navbar-tool-icon-box">
                         <i class="navbar-tool-icon far fa-heart"></i>
                     </div>
                 </a>
-                <a class="a navbar-tool d-flex ts-route" href="/home">
+                <a class="a navbar-tool d-flex ts-route" href="/">
                     <div class="navbar-tool-icon-box">
                         <i class="navbar-tool-icon far fa-user"></i>
                     </div>
@@ -33,7 +33,7 @@ export default function navbarComponent() {
                         My Account
                     </div>
                 </a>
-                <a class="a navbar-tool d-flex ts-route" href="/home">
+                <a class="a navbar-tool d-flex ts-route" href="/">
                     <div class="navbar-tool-icon-box">
                         <span class="navbar-tool-icon-label">0</span>
                         <i class="navbar-tool-icon fas fa-shopping-cart"></i>

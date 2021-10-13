@@ -24,7 +24,7 @@ export default class App {
     router() {
         
         const routes = [
-            { path: '/home', view: HomeView },
+            { path: '/', view: HomeView },
             { path: '/products', view:  ProductsView },
             { path: '/products/:id', view:  ProductDetailView },
             { path: '/404', view:  HomeView }
