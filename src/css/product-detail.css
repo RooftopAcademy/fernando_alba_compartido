@@ -1,0 +1,127 @@
+
+.product-container {
+    margin-top: -4.875rem;
+    max-width: 100%;
+    width: 100%;
+    padding: 0px 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.product-card {
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: .4375rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 0.3rem 1.525rem -0.375rem rgb(0 0 0 / 10%);
+}
+.product-gallery {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
+.product-gallery-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.product-detail {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 15px;
+}
+.product-detail-category {
+    font-size: 14px;
+    padding-bottom: 1rem;
+}
+.product-detail-price {
+    color: #4e54c8;
+    font-weight: 400;
+    margin-right: .25rem;
+    font-size: calc(1.3rem + 0.6vw);
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+}
+.product-detail-size {
+    margin-bottom: 1rem;
+}
+.product-detail-size-header {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: .25rem;
+}
+.product-detail-size-form-label {
+    margin-bottom: .375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #373f50;
+}
+.size-nav-link {
+    color: #4b566b;
+    font-size: 0.875rem;
+}
+.product-detail-form-select {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #4b566b;
+    border: 1px solid #dae1e7;
+    border-radius: .3125rem;
+}
+.product-detail-form-select:focus {
+    outline: none;
+    border: 1px solid #FE696A;
+}
+.size {
+    width: 100%;
+    padding: .625rem 3rem .625rem 1rem;
+}
+.quantity {
+    width: 5rem;
+    padding: .625rem 0rem .625rem 1rem;
+    margin-right: 1rem;
+}
+.product-detail-add-to-cart {
+    align-items: center;
+    margin-bottom: 1.875rem;
+}
+.product-detail-add-to-cart-button {
+    width: 100%;
+    padding: 10px 22px;
+    font-size: 15px;
+    border-radius: .3125rem;
+}
+.product-detail-info {
+    padding: 20px;
+    border-top-left-radius: .4375rem;
+    border-top-right-radius: .4375rem;
+    background-color: transparent;
+    border: 1px solid #dde4eb;
+}
+.product-detail-info-title {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 0px;
+}
+.product-detail-info-body {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 992px) {
+    .product-gallery {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+        padding-top: 1.5rem;
+    }
+    .product-detail {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .product-container {
+        max-width: 1260px;
+    }
+}

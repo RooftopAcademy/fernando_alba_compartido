@@ -60,6 +60,29 @@
     margin-left: .5rem;
     pointer-events: none;
 }
+.page-title-overlap {
+    display: block;
+    background-color: #373f50;
+    padding-top: 1.25rem;
+    padding-bottom: 6.375rem;
+}
+.page-title-container {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    width: 100%;
+    padding: 16px 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.page-title-text {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    font-size: calc(1.3rem + 0.6vw);
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: .75rem;
+}
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
@@ -71,6 +94,9 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .page-title-text {
+        text-align: left;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -83,5 +109,8 @@
     }
     .p {
         font-size: 1.125rem;
+    }
+    .page-title-container {
+        max-width: 1260px;
     }
 }

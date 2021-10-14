@@ -3,6 +3,7 @@ import "./css/app.css"
 import "./css/elements.css"
 import "./css/index.css"
 import "./css/product-list.css"
+import "./css/product-detail.css"
 
 
 let app = new App()
