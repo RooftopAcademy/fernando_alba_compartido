@@ -14,13 +14,11 @@ export default class ProductDetailView extends AbstractView {
     getHTMLElement(): HTMLElement {
 
         const divElement = document.createElement('div')
-        divElement.innerHTML = ProductDetailPage()
 
         const product = this.app.getStore().getCatalog().findProductById(this.productId)
 
-        console.log(product);
+        divElement.innerHTML = ProductDetailPage(product)
         
-
         this.setEventListener(divElement, this.app)
         
         return divElement

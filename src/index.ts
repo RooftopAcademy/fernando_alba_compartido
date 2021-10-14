@@ -3,16 +3,18 @@ import "./css/app.css"
 import "./css/elements.css"
 import "./css/index.css"
 import "./css/product-list.css"
+import "./css/product-detail.css"
 
 
 let app = new App()
 
 app.setContainer(document.getElementById('app') as HTMLElement)
 
+document.addEventListener('DOMContentLoaded', () => {
+    app.router()
+})
 
-app.navigateTo('/home')
-
-window.addEventListener("popstate", function() {
+window.addEventListener("popstate", () => {
     app.router()
 })
 
